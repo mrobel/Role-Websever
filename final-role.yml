@@ -2,5 +2,5 @@
 - hosts: all
   become: yes
   roles:
-  - role-1
-  - ubuntu
+  - centos-role
+  - ubuntu-role
