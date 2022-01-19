@@ -1,0 +1,7 @@
+---
+# handlers file for role-1
+- name: Restart apache2
+  service:
+    name: apache2
+    state: restarted
+  when: ansible_distribution == "Ubuntu"

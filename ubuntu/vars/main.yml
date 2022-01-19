@@ -1,0 +1,3 @@
+---
+# vars file for role-1
+httpd_port: 8080

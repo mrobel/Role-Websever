@@ -1,0 +1,13 @@
+- name: Deploy ecom
+  git:
+    dest: /var/www/html
+    repo: https://github.com/mrobel/ecomm.git
+    force: yes
+  when: ansible_distribution == "Ubuntu"
+- name: Update new port
+  template:
+    src: ports.j2
+    dest: /etc/apache2/ports.conf
+  when: ansible_distribution == "Ubuntu"
+  notify:
+  - Restart apache2

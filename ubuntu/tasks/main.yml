@@ -1,0 +1,4 @@
+---
+# tasks file for role-1
+- import_tasks: install.yml
+- import_tasks: deploy.yml

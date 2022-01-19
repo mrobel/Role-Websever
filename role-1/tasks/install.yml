@@ -1,0 +1,15 @@
+- name: Install httpd
+  package:
+    name: httpd
+    state: present
+  when: ansible_distribution == "CentOS"
+- name: start httpd
+  service:
+    name: httpd
+    state: started
+  when: ansible_distribution == "CentOS"
+- name: Install git
+  package:
+    name: git
+    state: present
+  when: ansible_distribution == "CentOS"
